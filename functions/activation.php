@@ -4,15 +4,15 @@ function va_references_setup_post_type() {
 
 	$args = array(
 	'labels' => array(
-		'name' => __('References'),
-		'singular_name' => __('Reference'),
-		'all_items' => __('All References'),
-		'add_new_item' => __('Add New Reference'),
-		'edit_item' => __('Edit Reference'),
-		'view_item' => __('View Reference')
+		'name' => __('References', 'va-references'),
+		'singular_name' => __('Reference', 'va-references'),
+		'all_items' => __('All References', 'va-references'),
+		'add_new_item' => __('Add New Reference', 'va-references'),
+		'edit_item' => __('Edit Reference', 'va-references'),
+		'view_item' => __('View Reference', 'va-references')
 	),
-	'public' => false,
-	'publicly_queryable' => false,
+	'public' => true,
+	'publicly_queryable' => true,
 	'has_archive' => true,
 	'rewrite' => array('slug' => 'references'),
 	'show_ui' => true,
@@ -20,10 +20,9 @@ function va_references_setup_post_type() {
 	'show_in_nav_menus' => true,
 	'show_in_admin_bar' => true,
 	'capability_type' => 'page',
-	'supports' => array('title', 'editor', 'thumbnail'),
+	'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
 	'exclude_from_search' => true,
 	'menu_position' => 20,
-	'has_archive' => false,
 	'menu_icon' => 'dashicons-laptop'
 	);
 	

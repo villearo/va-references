@@ -1,41 +1,45 @@
 <?php
 
+/**
+ * Enque styles and scripts in head
+ */
+function va_references_styles() {
+    wp_enqueue_style( 'references-styles', VA_REFERENCES_PLUGIN_URL . 'styles/references-styles.css' );
+}
+add_action('wp_enqueue_scripts', 'va_references_styles');
+
+
+
+
 function va_references_display_reference() {
 
     $post_id = get_the_ID();
-    $client_name = get_post_meta( $post_id, 'client_name', true );
-    $client_job = get_post_meta( $post_id, 'client_job', true );
-    $company = get_post_meta( $post_id, 'company', true );
-    $company_url = esc_url( get_post_meta( $post_id, 'company_url', true ) );
-    $image = get_the_post_thumbnail_url( $post_id, 'thumbnail' );
+    $reference_link = esc_url( get_post_meta( $post_id, 'reference_link', true ) );
+    $image = get_the_post_thumbnail_url( $post_id, 'medium_large' );
 
     $output = '';
-    $output .= '<div class="col reference"><div class="bubble">' . get_the_content() . '</div><div class="person">';
+    $output .= '<div class="col reference">';
+    
     if ( $image ) {
-        $output .= '<img class="small" src="' . $image . '" alt="' . $client_name . '" />';
+        $output .= '<a href="' . esc_url( get_permalink() ) . '">';
+        $output .= '<div class="laptop">';
+        $output .= '<div class="laptop-screen"><img src="' . $image . '" alt="' . get_the_title() . '" /></div>';
+        $output .= '<div class="laptop-body"></div>';
+        $output .= '</div>'; // <-- .laptop
+        $output .= '</a>';
     }
-    $output .= '<div>';
-    $output .= $client_name;
-    if ( $client_job || $company || $company_url ) {
-        $output .= '<br />';
-        $output .= '<small>';
+
+    $output .= '<h2><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h2>';
+
+    if ( has_excerpt() ) {
+        $output .= '<p>' . get_the_excerpt() . '</p>';
     }
-    $output .= $client_job;
-    if ( $client_job && ( $company || $company_url ) ) {
-        $output .= ' - ';
+
+    if ( $reference_link ) {
+        $output .= '<a target="_blank" rel="noopener nofollow" href="' . $reference_link . '">' . __( 'Go to website', 'va-references' ) . ' →</a>';
     }
-    if ( $company && $company_url ) {
-        $output .= '<a href="' . $company_url . '" target="_blank">' . $company . '</a>';
-    } else if ( $company_url ) {
-        $output .= '<a href="' . $company_url . '" target="_blank">' . $company_url . '</a>';
-    } else if ( $company ) {
-        $output .= $company;
-    }
-    if ( $client_job || $company || $company_url ) {
-        $output .= '</small>';
-    }
-    $output .= '</div>';
-    $output .= '</div></div>';
+
+    $output .= '</div>'; // <-- .col.reference
     echo $output;
 
 }
