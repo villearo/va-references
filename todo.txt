@@ -1,0 +1,5 @@
+- translations
+- register pll string for polylang
+- clean shortcode atts ?
+- footer backlink to villearo.fi
+- readme
