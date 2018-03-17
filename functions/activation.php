@@ -14,7 +14,7 @@ function va_references_setup_post_type() {
 	'public' => true,
 	'publicly_queryable' => true,
 	'has_archive' => true,
-	'rewrite' => array('slug' => 'references'),
+	'rewrite' => array('slug' => __('references', 'va-references')),
 	'show_ui' => true,
 	'show_in_menu' => true,
 	'show_in_nav_menus' => true,
