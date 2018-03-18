@@ -20,7 +20,7 @@ function va_references_setup_post_type() {
 	'show_in_nav_menus' => true,
 	'show_in_admin_bar' => true,
 	'capability_type' => 'page',
-	'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+	'supports' => array('title', 'editor', 'thumbnail'),
 	'exclude_from_search' => true,
 	'menu_position' => 20,
 	'menu_icon' => 'dashicons-laptop'
