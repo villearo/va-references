@@ -3,7 +3,7 @@
 get_header();
 
 
-echo do_shortcode('[references]');
+echo do_shortcode('[references columns="3"]');
 
 
 
