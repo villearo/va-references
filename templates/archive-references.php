@@ -3,7 +3,7 @@
 get_header();
 
 
-echo do_shorcode('[references]');
+echo do_shortcode('[references]');
 
 
 
