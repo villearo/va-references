@@ -11,8 +11,8 @@ function va_references_setup_post_type() {
 		'edit_item' => __('Edit Reference', 'va-references'),
 		'view_item' => __('View Reference', 'va-references')
 	),
-	'public' => false,
-	'publicly_queryable' => false,
+	'public' => true,
+	'publicly_queryable' => true,
 	'has_archive' => false,
 	'rewrite' => array('slug' => __('references', 'va-references')),
 	'show_ui' => true,
