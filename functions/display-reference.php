@@ -9,8 +9,9 @@ function va_references_styles() {
 add_action('wp_enqueue_scripts', 'va_references_styles');
 
 
-
-
+/**
+ * Set SVG variable for inlining
+ */
 $laptop_svg = '<svg width="820px" height="434px" viewBox="0 0 820 434" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
             <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="50%" gradientTransform="translate(0.500000,0.000000),scale(0.036585,1.000000),translate(-0.500000,-0.000000)" id="radialGradient-1">
