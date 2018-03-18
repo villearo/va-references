@@ -22,10 +22,11 @@
     z-index: 1;
 }
 
-.reference .laptop #bezel {
+.reference .laptop #lid {
 	fill: rgba(0, 0, 0, 0);
 	transition: all 150ms;
 }
-.reference .laptop:hover #bezel {
+
+.reference .laptop:hover #lid {
     fill: red; /*rgba(0, 0, 0, 0.3);*/
 }
