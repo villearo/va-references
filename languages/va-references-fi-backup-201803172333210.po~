@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VA References\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-17 23:32+0000\n"
+"PO-Revision-Date: 2018-03-17 23:32+0000\n"
+"Last-Translator: Ville Aro <ville@villearo.fi>\n"
+"Language-Team: Finnish\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: functions/activation.php:7
+msgid "References"
+msgstr "Referenssit"
+
+#: functions/activation.php:8
+msgid "Reference"
+msgstr "Referenssi"
+
+#: functions/activation.php:9
+msgid "All References"
+msgstr "Kaikki referenssit"
+
+#: functions/activation.php:10
+msgid "Add New Reference"
+msgstr "Uusi referenssi"
+
+#: functions/activation.php:11
+msgid "Edit Reference"
+msgstr "Muokkaa referenssiä"
+
+#: functions/activation.php:12
+msgid "View Reference"
+msgstr "Näytä referenssi"
+
+#: functions/activation.php:17
+msgid "references"
+msgstr "referenssit"
+
+#. The HTML id attribute for the metabox section
+#: functions/meta-boxes.php:6
+msgid "Reference Details"
+msgstr "Referenssin tiedot"
+
+#: functions/meta-boxes.php:19
+msgid "Reference Link URL"
+msgstr "Referenssin linkin URL"
+
+#: functions/display-reference.php:39
+msgid "Go to website"
+msgstr "Siirry sivustolle"
+
+#. Name of the plugin
+msgid "VA References"
+msgstr "VA Referenssit"
+
+#. Description of the plugin
+msgid ""
+"Custom post type for website references. Shortcode usage: [references] or "
+"more specific [references order='asc' orderby='date' posts='10' columns='3' "
+"ids='60, 64']"
+msgstr ""
+"Custom post type for website references. Shortcode usage: [references] or "
+"more specific [references order='asc' orderby='date' posts='10' columns='3' "
+"ids='60, 64']"
+
+#. URI of the plugin
+msgid "https://github.com/villearo/va-references"
+msgstr "https://github.com/villearo/va-references"
+
+#. Author of the plugin
+msgid "Ville Aro"
+msgstr "Ville Aro"
+
+#. Author URI of the plugin
+msgid "https://villearo.fi/"
+msgstr "https://villearo.fi/"

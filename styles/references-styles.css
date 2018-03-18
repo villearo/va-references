@@ -1,0 +1,31 @@
+.reference {
+	text-align: center;
+}
+
+.reference .laptop div {
+	position: relative;
+}
+
+.reference .laptop svg {
+	position: relative;
+	width: 100%;
+	height: auto;
+	z-index: 2;
+}
+
+.reference .laptop img {
+    width: 74%;
+    height: auto;
+    position: absolute;
+    top: 7%;
+    left: 13%;
+    z-index: 1;
+}
+
+.reference .laptop #bezel {
+	fill: rgba(0, 0, 0, 0);
+	transition: all 150ms;
+}
+.reference .laptop:hover #bezel {
+    fill: rgba(0, 0, 0, 0.3);
+}
