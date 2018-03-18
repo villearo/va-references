@@ -46,7 +46,7 @@ function va_references_display_reference() {
 
     //$output .= '<h3><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h3>';
     $output .= '<h3>' . get_the_title() . '</h3>';
-    $output .= '<p>' . get_the_content() . '</p>';
+    $output .= '<p>' . get_the_excerpt() . '</p>';
 
     if ( $reference_link ) {
         $output .= '<a target="_blank" rel="noopener nofollow" href="' . $reference_link . '">' . __( 'Go to website', 'va-references' ) . ' →</a>';
