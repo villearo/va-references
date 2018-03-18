@@ -4,7 +4,6 @@
  * Set SVG variable for inlining
  */
 $laptop_svg = '<svg width="820px" height="434px" viewBox="0 0 820 434" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="laptop">
                 <rect id="lid" stroke="#dcdcdc" stroke-width="5" x="77.5" y="2.5" width="665" height="409" rx="27"></rect>
