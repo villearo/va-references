@@ -1,15 +1,6 @@
 <?php
 
 /**
- * Enque styles and scripts in head
- */
-function va_references_styles() {
-    wp_enqueue_style( 'references-styles', VA_REFERENCES_PLUGIN_URL . 'styles/references-styles.css' );
-}
-add_action('wp_enqueue_scripts', 'va_references_styles');
-
-
-/**
  * Set SVG variable for inlining
  */
 $laptop_svg = '<svg width="820px" height="434px" viewBox="0 0 820 434" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -30,11 +21,9 @@ $laptop_svg = '<svg width="820px" height="434px" viewBox="0 0 820 434" version="
         </g>
     </svg>';
 
-
-
-
-
-
+/**
+ * Output single reference
+ */
 function va_references_display_reference() {
 
     $post_id = get_the_ID();
@@ -46,7 +35,8 @@ function va_references_display_reference() {
     
     if ( $image ) {
         global $laptop_svg;
-        $output .= '<a class="laptop" href="' . esc_url( get_permalink() ) . '">';
+        //$output .= '<a class="laptop" href="' . esc_url( get_permalink() ) . '">';
+        $output .= '<a class="laptop" target="_blank" rel="noopener nofollow" href="' . $reference_link . '">';
         $output .= '<div>';
         $output .= $laptop_svg;
         $output .= '<img src="' . $image . '" alt="' . get_the_title() . '" />';
@@ -54,7 +44,8 @@ function va_references_display_reference() {
         $output .= '</a>';
     }
 
-    $output .= '<h2><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h2>';
+    //$output .= '<h3><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h3>';
+    $output .= '<h3>' . get_the_title() . '</h3>';
 
     if ( has_excerpt() ) {
         $output .= '<p>' . get_the_excerpt() . '</p>';
