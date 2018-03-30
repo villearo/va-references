@@ -3,7 +3,7 @@
 /**
  * Set SVG variable for inlining
  */
-$laptop_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="820" height="462" viewBox="0 0 820 462">
+$laptop_svg = '<svg id="laptop" xmlns="http://www.w3.org/2000/svg" width="820" height="462" viewBox="0 0 820 462">
   <g fill="none" fill-rule="evenodd">
     <rect id="lid" width="665" height="440" x="77.5" y="2.5" stroke="#E3E3E3" stroke-width="5" rx="26"/>
     <path id="frame" fill="#404040" d="M80,27.0008234 C80,14.8501041 89.8420343,5 102.006493,5 L717.993507,5 C730.147357,5 740,14.8508545 740,27.0008234 L740,417.999177 C740,430.149896 730.157966,440 717.993507,440 L102.006493,440 C89.8526425,440 80,430.149145 80,417.999177 L80,27.0008234 Z M110,35 L110,410 L710,410 L710,35 L110,35 Z"/>
